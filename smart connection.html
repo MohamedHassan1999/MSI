@@ -1,0 +1,322 @@
+<!doctype html>
+<html>
+<head>
+    <title>Portfolio MSI </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+ 
+<body>
+  <nav>
+    <div class="nav-wrapper green lighten-4 text-black">
+      <a href="index.html" class="brand-logo"> <img src="img/afbeelding 3.png" alt=""> </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="smart project.html">Smart project</a></li>
+        <li><a href="smart connection.html">Smart connection</a></li>
+        <li><a href="smart business.html">Smart business</a></li>
+        <li><a href="smart start.html">Smart start</a></li>
+        <li><a href="smart technology.html">Smart technology</a></li>
+        <li><a href="smart me.html">Smart me</a></li>
+       
+      </ul>
+    </div>
+  </nav>
+
+
+
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="IMG/Afbeelding1.png">
+          <span class="card-title"></span>
+        </div>
+        <div class="card-content">
+          <p>Om een beter beeld te krijgen van HTML hebben we opdracht gekregen om een webpagina aan te passen. 
+            Ik heb een pagina van Coolblue aangepast naar een CV voor een afstudeerstage. 
+            Dit vond ik in het begin lastig, hierom heb ik hulp gevraagd aan mijn klasgenoten met een technische achtergrond. 
+            Deze hebben mijn tips en trics gegeven voor de beste aanpak. 
+            Hierdoor heb ik geleerd hoe ik alle elementen in de HTML code kon vinden en de website kon aanpassen.</p>
+        </div>
+        
+        </div>
+      </div>
+    
+
+   
+
+    
+
+    <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image">
+            <head>
+
+              <meta charset="utf-8">
+          
+              <title>Covid-19</title>
+          
+          </head>
+          
+          <body>
+              <h4>
+          
+                  Covid-19 numbers in the
+          
+                  <div id="land"></div>
+          
+              </h4>
+              Datum:
+              <div id="datum"></div>
+              <br>
+              Nieuwe besmettingen:
+              <div id="nieuweBesmettingen"></div>
+              <br>
+              Nieuwe doden
+              <div id="nieuweDoden"></div>
+              <br>
+              Totale besmettingen:
+              <div id="totaleBesmettingen"></div>
+              <br>
+              Totale doden:
+              <div id="totaleDoden"></div>
+          
+              <script lang="text/javascript">
+          
+                  fetch('https://api.covid19api.com/summary')
+          
+                      .then(function (resp) { return resp.json() }) // Convert data to json
+          
+                      .then(function (data) {
+          
+                          console.log(data);
+          
+                          console.log(data.Countries[122].Country);
+          
+                          console.log(data.Countries[122].TotalDeaths);
+          
+                          document.getElementById("land").innerHTML = (data.Countries[122].Country);
+                          document.getElementById("datum").innerHTML = (data.Countries[122].Date);
+                          document.getElementById("nieuweBesmettingen").innerHTML = (data.Countries[122].NewConfirmed);
+                          document.getElementById("nieuweDoden").innerHTML = (data.Countries[122].NewDeaths);
+                          document.getElementById("totaleBesmettingen").innerHTML = (data.Countries[122].TotalConfirmed);
+                          document.getElementById("totaleDoden").innerHTML = (data.Countries[122].TotalDeaths);
+                      })
+          
+                      .catch(function () { // catch any errors
+          
+                  });
+              </script>
+          </body>
+
+          </div>
+          <div class="card-content">
+            <p>Op 20 september heb ik een website gemaakt waarop de dagelijkse corona bestemmingen en doden te zien zijn. 
+              Boven deze tekst is de api ook geïntegreerd op deze webpagina.
+              Deze api houdt de dagelijkse coronabesmettingen en coronadoden bij.
+              Om de api werkende te krijgen heb ik de instructies op moodle gevolgd.
+              Voor mij was het een leerzame ervaring, omdat ik nog geen ervaring had met het bouwen van een api.</p>
+          </div>
+          
+          </div>
+        </div>
+      
+
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image">
+            <img src="IMG/afbeelding 11.png">
+            <span class="card-title"></span>
+          </div>
+          <div class="card-content">
+            <p>Op 8 september heb ik meer over HTML en CSS geleerd. 
+              Hierbij heb ik geleerd hoe deze codes eruitzien en wat hiermee gedaan kan worden. 
+              Met HTML kan tekst op een website geplaatst worden. 
+              Met CSS kan de opmaak van de website worden geregeld. 
+              In bovenstaande foto is te zien hoe mijn eerste website eruit zag.
+              Gezien ik nog geen ervaring had was de website nog niet heel geadvanceerd.
+             Op de website heb ik mijzelf kort voorgesteld aan de buitenwereld en een filmpje geplaatst.
+            Ondanks dat de website nog niet veel belovende is heb ik wel veel geleerd over de werking van HTML en Microsoft Visual Studio Code.
+           Deze kennis gaat zeer bruikbaar zijn voor de website die ik moet maken om mijn portfolio op te zetten.</p>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+  
+
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <div id="weather"></div>
+          <div id="description"></div>
+          <h1 id="temp"></h1>
+  <div id="location"></div>
+
+        </div>
+        <div class="card-content">
+          <p>Als vervolg op de corona api heb ik een api gemaakt van het weer. 
+            De api is te zien boven deze tekst. 
+            Hierop is te zien welke tempratuur het is en of het droog, bewolkt of regent in Nijmegen.
+            De kennis die ik uit de corona api heb opgedaan met de codeertaal JavaScript heeft mij hierbij geholpen.
+            Hierdoor heb ik de opdracht gemakkelijker kunnen uitvoeren dan de eerste api die ik heb gemaakt.
+            Verder heb ik met deze api ook geleerd hoe ik de kennis van de eerste api kan toepassen om andere api's te maken.
+          </p>
+        </div>
+        
+        </div>
+      </div>
+    
+
+    <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image">
+            <img src="IMG/afbeelding 21.png">
+            <span class="card-title"></span>
+          </div>
+          <div class="card-content">
+            <p> Met het maken van de navbar op mijn website liep ik vast. 
+              Het linken naar de verschillende pagina's ging niet goed en hierom heb ik hulp gevraagd aan Mees die meer ervaring had met het maken van een website.
+            Hiervoor zijn wij samen naar de HAN gegaan en heeft Mees mij uitgelegd hoe je binnen HTML kunnen linken naar pagina's. 
+          Dit heeft geholpen in het uiteindelijk maken van een goede website om mijn portfolio op te zetten. </p>
+          </div>
+          
+          </div>
+        </div>
+      
+
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image">
+            <img src="IMG/afbeelding 22.png">
+            <span class="card-title"></span>
+          </div>
+          <div class="card-content">
+            <p> Binnen deze minor heb ik kennis gekregen over big data en hoe deze in een bussines casus kan worden toegepast. 
+              Big data is een steeds groter wordend databestand die met meer velocity blijft toenemen.
+              Vanuit een bussines prespectief kan deze informatie voor steeds meer toepassingen worden gebruikt.
+              Voorbeelden hiervan zijn beter betere besluitvorming, productontwikkeling en geoptimaliseerde aanbiedingen.
+              Door over een grote hoeveelheid data te beschikken kan een organisatie beter keuzes maken over welke strategie uitgevoerd moet worden.
+              Deze informatie kan ook gebruikt worden om producten verder te ontwikkelen door de producten te verbinden met andere producten, zoals in een smart home systeem.
+              Big data kan verder gebruikt worden om jouw klanten beter te leren kennen.
+              Indien iemand vaak een bepaald product koopt kan een organisatie hiervan een persoonlijke aanbieding sturen naar deze klant.
+              Klanten die lange tijd geleden een aankoop hebben gedaan kan een cadeaukaart worden gestuurd om deze terug te krijgen in de winkel.
+            </p>
+          </div>
+         
+          </div>
+        </div>
+      </div>
+  
+
+
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="IMG/afbeelding 23.png">
+          <span class="card-title"></span>
+        </div>
+        <div class="card-content">
+          <p> Bij smart connection heb ik kennis verkregen van de volgende codeertalen: HTML, CSS en Javascript.
+            Met deze kennis kan ik gesprekspartner worden voor het maken van een juiste en volledige website of werkenbij website.
+            Door kennis te hebben van deze codeertalen, weet ik wat mogelijk is met HTML, CSS en Javascript.
+            Met HTML kan de tekst op een website gezet worden met CSS de opmaak en Javascript kan interactieve elementen weergeven.
+            Javascript kan op een werkenbij website gebruikt worden om het aantal sollicitanten weer te geven.
+            Wanneer veel mensen al gesolliciteerd hebben op een vacature, gaan andere kandidaten ook sneller solliciteren.
+            Dit doen doen ze omdat ze bang zijn dat de functie anders snel weg zal zijn.
+          </p>
+        </div>
+        
+        </div>
+      </div>
+    
+
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="IMG2/afbeelding 16.png">
+          <span class="card-title"></span>
+        </div>
+        <div class="card-content">
+          <p> Als ik de kennis die ik tijdens Smart connection heb opgedaan in een business case zet lijkt de veelzijdigheid van coderen mij het meest geschikt.
+           Coderen heeft veel meer mogelijkheden dan ik in eerste instantie verwacht had.
+           In eerst instantie dacht ik dat het voornamelijk gebruikt wordt om een website in elkaar te zetten.
+           Nu heb ik geleerd dat eigenlijk alles waar een processor of software achter zit een code gebruikt wordt om dit aan te sturen.
+           Coderen is de basis Smart industry 4.0.
+           Dit kan gebruikt worden om zelfrijdende auto's aan te sturen, machines te automatiseren, apps te bouwen, IoT schakelingen en algoritmes.
+           Om dieper in te gaan op algoritmes kan dit marketing automatiseren.
+           Dit wordt momenteel al gedaan op YouTube. 
+           Dit algoritme geeft aanbevelingen en advertenties op basis van jouw kijkverleden.
+           Spotify doet dit door aan het einde van jaar een wrapped playlist te maken met jouw meest besluiterde nummers.
+           Coderen en automatiseringen gaan dus hand in hand.
+          </p>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+
+
+  
+    <footer class="page-footer green lighten-4">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Portfolio MSI Mohamed Hassan</h5>
+            <p class="grey-text text-lighten-4">Op deze website is te zien hoe ik mijzelf heb ontwikkeld tijdens de minor Smart Industry</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="smart business.html"> Smart business</a></li>
+              <li><a class="grey-text text-lighten-3" href="smart connection.html"> Smart connection</a></li>
+              <li><a class="grey-text text-lighten-3" href="smart project.html">Smart project</a></li>
+              <li><a class="grey-text text-lighten-3" href="smart start.html">Smart start</a></li>
+              <li><a class="grey-text text-lighten-3" href="smart technology.html">Smart technology</a></li>
+              <li><a class="grey-text text-lighten-3" href="smart me.html">Smart me</a></li>
+            </ul>
+          </div>
+        </div>
+      </doxiv>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2022 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!"></a>
+        </div>
+      </div>
+    </footer>
+
+    <script lang="text/javascript">
+      // future javascript
+      function weatherBalloon( cityID ) {
+      var key = '2b2251a4d2ce3ba1047749f4936f8fff';
+       fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)
+       .then(function(resp) { return resp.json() }) 
+       .then(function(data) {
+      console.log(data);
+      drawWeather(data);
+       })
+       .catch(function() {});
+      }
+      window.onload = function(){
+          weatherBalloon( 2750052 ); // Toronto
+      }
+      function drawWeather( d ) {
+      var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+      var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32);
+      
+      document.getElementById('description').innerHTML = d.weather[0].description;
+      document.getElementById('temp').innerHTML = celcius + '&deg;';
+      document.getElementById('location').innerHTML = d.name;
+      }
+      </script>
+
+        </html>
